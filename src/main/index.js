@@ -2,7 +2,6 @@
 
 import { app, shell, BrowserWindow, ipcMain } from 'electron';
 import { electronApp, optimizer } from '@electron-toolkit/utils';
-import { autoUpdater } from 'electron-updater';
 import siteWindow from './src/site';
 import loaderWindow from './src/loader';
 // Configure the update feed URL (replace 'username' and 'repo' with your GitHub username and repository name).
