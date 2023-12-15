@@ -1,0 +1,24 @@
+# Define the 'productName' variable
+productName: Cogniquets
+# Rest of your configuration
+appId: com.electron.cogniquets
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+asarUnpack:
+  - resources/**
+win:
+  icon: build/windows/icons/icon.ico # Specify the path to your Windows icon file (ICO format)
+  target: nsis
+nsis:
+  installerIcon: build/windows/icons/icon.ico
+  uninstallerIcon: build/windows/icons/icon.ico
+  installerHeaderIcon: build/windows/icons/icon.ico
+  artifactName: ${name}-${version}-setup.${ext}
+  uninstallDisplayName: ${productName} Uninstaller
+  createDesktopShortcut: always
